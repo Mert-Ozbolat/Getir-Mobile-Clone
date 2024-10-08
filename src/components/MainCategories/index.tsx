@@ -9,7 +9,7 @@ function index() {
     const [categories, setCategories] = useState<Category[]>(categoriesGetir)
     return (
         <View>
-            <View>
+            <View style={styles.listContainer}>
                 {
                     categories.map((item) => (
                         <CategoryItem key={item.id} item={item} />
@@ -24,6 +24,9 @@ function index() {
 const styles = StyleSheet.create({
     listContainer: {
         flex: 1,
+        flexDirection: 'row',
+        alignItems: 'flex-start',
+        flexWrap: 'wrap'
     }
 })
 
